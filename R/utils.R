@@ -12,7 +12,7 @@
 #' @return A flattened dataframe
 
 
-kobo_flatten <- function(x, ignore = "^_") {
+kobor_flatten <- function(x, ignore = "^_") {
   listcol <- names(x)[purrr::map_lgl(x, ~ purrr::is_list(.x)) &
                         !stringr::str_detect(names(x), ignore)]
 
@@ -22,7 +22,7 @@ kobo_flatten <- function(x, ignore = "^_") {
 
   if (any(purrr::map_lgl(x, ~ purrr::is_list(.x)) &
           !stringr::str_detect(names(x), ignore))) {
-    kobor::kobo_flatten(x)
+    kobor::kobor_flatten(x)
   } else {
     x
   }

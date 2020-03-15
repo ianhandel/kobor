@@ -12,7 +12,7 @@
 #'
 #' @export
 
-kobo_assets <- function(username, password) {
+kobor_assets <- function(username, password) {
   httr::GET(
     "https://kf.kobotoolbox.org/api/v2/assets/",
     httr::authenticate(username, password),
@@ -41,7 +41,7 @@ kobo_assets <- function(username, password) {
 #'
 #' @export
 
-kobo_read <- function(asset, username, password) {
+kobor_read <- function(asset, username, password) {
   url <- paste0(
     "https://kf.kobotoolbox.org/api/v2/assets/",
     asset,
@@ -57,7 +57,7 @@ kobo_read <- function(asset, username, password) {
     httr::content("text", encoding = "UTF-8") %>%
     jsonlite::fromJSON() %>%
     purrr::pluck("results") %>%
-    kobo_flatten() %>%
-    kobo_flatten() %>%
+    kobor_flatten() %>%
+    kobor_flatten() %>%
     purrr::keep(~ !purrr::is_list(.x))
 }
