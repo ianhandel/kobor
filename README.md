@@ -29,7 +29,7 @@ forms
 # Locate the form in the list of assets and copy its uid
 
 mydata <- kobor_read(asset = "uid you noted", username = "fred", password = "mypassword")
-
+mydata
 
 ```
 
