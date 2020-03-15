@@ -12,7 +12,7 @@ You can install the released version of kobor from GitHub with:
 
 ``` r
 install.packages("remotes")
-remotes::install_github("ianhandel/kobr")
+remotes::install_github("ianhandel/kobor")
 ```
 
 ## Example
